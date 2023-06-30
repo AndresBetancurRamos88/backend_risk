@@ -1,0 +1,41 @@
+tags:
+  - name: Risks history
+consumes:
+  - application/json
+summary: Update a risk history by ID
+description: Endpoint to update the data of a risk, base on the id risk.
+parameters:
+  - name: risk_history_id
+    in: path
+    type: integer
+    required: true
+    description: The ID of the risk history to update.
+  - name: body
+    in: body
+    required: true
+    schema:
+      type: object
+      properties:
+        title:
+          type: string
+          description: The new value for the title field.
+        impact:
+          type: string
+          description: The new value for the impact field.
+        probability:
+          type: number
+          format: float
+          description: The new value for the probability field.
+        description:
+          type: string
+          description: The new value for the description field.
+        risk_id:
+          type: integer
+          description: The new value for the risk_id field.
+responses:
+  200:
+    description: Risk history updated successfully.
+  404:
+    description: Risk history not found.
+  500:
+    description: Server error

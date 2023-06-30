@@ -1,0 +1,16 @@
+tags:
+  - name: Risks
+consumes:
+  - application/json
+summary: Get all risks
+description: Endpoint to get all risk register from the database.
+parameters:
+  - in: header
+    name: Authorization
+    value: Bearer
+    required: true
+responses:
+  200:
+    description: Risks
+  401:
+    description: Fails to get items due to authentication error

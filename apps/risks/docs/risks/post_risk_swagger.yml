@@ -1,0 +1,28 @@
+tags:
+  - name: Risks
+consumes:
+  - application/json
+summary: Create new risk
+description: Endpoint to create new risk register in the database.
+parameters:
+  - in: header
+    name: Authorization
+    value: Bearer
+    type: string
+    required: false
+  - in: body
+    name: risk
+    description: Risk object
+    required: true
+    schema:
+      type: object
+      properties:
+        risk:
+          type: string
+responses:
+  201:
+    description: Risk has been added successfully
+  401:
+    description: Fails to get items due to authentication error
+  500:
+    description: Server error

@@ -1,0 +1,27 @@
+tags:
+  - name: Risks history by ID
+consumes:
+  - application/json
+summary: Get risks history
+description: Endpoint to get a risk history register, base on the id risk model (not in risk history model).
+parameters:
+  - in: header
+    name: Authorization
+    value: Bearer
+    required: true
+  - name: risk_id
+    in: path
+    type: integer
+    required: true
+    description: The ID of the risk history to get.
+  - name: page
+    in: path
+    type: integer
+    required: true
+    value: 1
+    description: Number of page.
+responses:
+  200:
+    description: Risks history
+  401:
+    description: Fails to get items due to authentication error

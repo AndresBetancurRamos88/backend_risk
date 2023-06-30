@@ -1,0 +1,14 @@
+Get token for authorization
+---
+tags:
+  - Token
+
+responses:
+  200:
+    description: Access token
+
+  400:
+    description: Bad request
+
+  401:
+    description: Fails to get items due to authentication error

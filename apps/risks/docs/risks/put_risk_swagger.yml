@@ -1,0 +1,31 @@
+tags:
+  - name: Risks
+consumes:
+  - application/json
+summary: Update a risk by ID
+description: Endpoint to update the data of a risk, base on the id risk.
+parameters:
+  - name: risk_id
+    in: path
+    type: integer
+    required: true
+    description: The ID of the risk to update.
+  - name: body
+    in: body
+    required: true
+    schema:
+      type: object
+      properties:
+        risk:
+          type: string
+          description: The new value for the risk field.
+        status:
+          type: boolean
+          description: The new value for the status field.
+responses:
+  200:
+    description: Risk updated successfully.
+  404:
+    description: Risk not found.
+  500:
+    description: Server error

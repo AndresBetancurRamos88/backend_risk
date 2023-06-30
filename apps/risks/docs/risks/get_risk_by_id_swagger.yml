@@ -1,0 +1,21 @@
+tags:
+  - name: Risks
+consumes:
+  - application/json
+summary: Get risk
+description: Endpoint to get one risk register, base on the id risk.
+parameters:
+  - in: header
+    name: Authorization
+    value: Bearer
+    required: true
+  - name: risk_id
+    in: path
+    type: integer
+    required: true
+    description: The ID of the risk to get.
+responses:
+  200:
+    description: Risks
+  401:
+    description: Fails to get items due to authentication error

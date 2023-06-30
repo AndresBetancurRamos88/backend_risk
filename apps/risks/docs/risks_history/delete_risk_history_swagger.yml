@@ -1,0 +1,23 @@
+tags:
+  - name: Risks history
+consumes:
+  - application/json
+summary: Delete risks history by id
+description: Endpoint to delete risk register, base on one id risk.
+parameters:
+  - in: header
+    name: Authorization
+    value: Bearer
+    required: true
+  - name: risk_history_id
+    in: path
+    type: integer
+    required: true
+    description: The ID of the risk history to delete.
+responses:
+  200:
+    description: Risk history deleted successfully
+  401:
+    description: Fails to get items due to authentication error
+  500:
+    description: Server error

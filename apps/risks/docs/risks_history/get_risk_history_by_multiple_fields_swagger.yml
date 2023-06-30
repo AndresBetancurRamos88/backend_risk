@@ -1,0 +1,37 @@
+tags:
+  - name: Risks history by multiple fields
+consumes:
+  - application/json
+summary: Get risks history
+description: Endpoint to get a risk history register, search for a word in the title or description
+parameters:
+  - in: header
+    name: Authorization
+    value: Bearer
+    required: true
+  - name: impact
+    in: path
+    type: string
+    required: false
+    description: String in the impact field.
+  - name: description
+    in: path
+    type: string
+    required: false
+    description: String in the description field.
+  - name: title
+    in: path
+    type: string
+    required: false
+    description: String in the title field.
+  - name: page
+    in: path
+    type: integer
+    required: true
+    value: 1
+    description: Number of page.
+responses:
+  200:
+    description: Risks history
+  401:
+    description: Fails to get items due to authentication error
