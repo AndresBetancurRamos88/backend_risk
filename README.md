@@ -26,6 +26,7 @@ Then run the following commands:
 - pipenv --python 3.9
 - pipenv shell
 - pipenv install
+- save secret key in an environment variable or in an .env file (variable name "SECRET_KEY")
 ```
 
 ## Create google application
@@ -48,6 +49,7 @@ Go to the folowing url:
         - http://127.0.0.1:8000/authorize
         - http://localhost:8000/oauth2-redirect.html
         - http://localhost:8000/token
+- save client id and client secret in environment variables or in an .env file (variable name "CLIENT_ID" "CLIENT_SECRET") 
 ```
 
 ## Test application
