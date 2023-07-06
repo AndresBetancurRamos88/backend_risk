@@ -9,6 +9,12 @@ parameters:
     name: Authorization
     value: Bearer
     required: true
+  - name: page
+    in: path
+    type: integer
+    required: true
+    value: 1
+    description: Number of page.
 responses:
   200:
     description: Risks history

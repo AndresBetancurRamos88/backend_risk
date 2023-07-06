@@ -1,7 +1,7 @@
 import os
 from datetime import timedelta
 
-BASE_DIR= os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
+BASE_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
 
 swagger_template = {
     "swagger": "2.0",
@@ -15,13 +15,10 @@ swagger_template = {
             "url": "https://www.linkedin.com/in/andres-betancur-ramos-14b35b49/",
         },
         "termsOfService": "https://www.linkedin.com/in/andres-betancur-ramos-14b35b49/",
-        "version": "1.0"
+        "version": "1.0",
     },
     "basePath": "/",
-    "schemes": [
-        "http",
-        "https"
-    ],
+    "schemes": ["http", "https"],
     "securityDefinitions": {
         "google_auth_login": {
             "type": "oauth2",
@@ -31,8 +28,8 @@ swagger_template = {
             "tokenUrl": "/token",
             "scopes": {
                 "email": "Acceso a la dirección de correo electrónico del usuario.",
-                "profile": "Acceso al perfil básico del usuario."
-            }
+                "profile": "Acceso al perfil básico del usuario.",
+            },
         },
     },
 }
@@ -41,15 +38,15 @@ swagger_config = {
     "headers": [],
     "specs": [
         {
-            "endpoint": 'apispec',
-            "route": '/apispec.json',
+            "endpoint": "apispec",
+            "route": "/apispec.json",
             "rule_filter": lambda rule: True,
             "model_filter": lambda tag: True,
         }
     ],
     "static_url_path": "/flasgger_static",
     "swagger_ui": True,
-    "specs_route": "/api-docs"
+    "specs_route": "/api-docs",
 }
 
 
@@ -75,8 +72,8 @@ class ProductionConfig(Config):
 
 
 config = {
-    'development': DevelopmentConfig,
-    'production': ProductionConfig,
+    "development": DevelopmentConfig,
+    "production": ProductionConfig,
 }
 
 REGISTERS_BY_PAGE = 5

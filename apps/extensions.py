@@ -2,8 +2,8 @@ import os
 
 from authlib.integrations.flask_client import OAuth
 from flask_caching import Cache
-from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
+from flask_sqlalchemy import SQLAlchemy
 
 db = SQLAlchemy()
 cache = Cache()
@@ -11,7 +11,7 @@ migrate = Migrate()
 oauth = OAuth()
 
 google = oauth.register(
-    name='google',
+    name="google",
     client_id=os.getenv("CLIENT_ID"),
     client_secret=os.getenv("CLIENT_SECRET"),
     server_metadata_url="https://accounts.google.com/.well-known/openid-configuration",

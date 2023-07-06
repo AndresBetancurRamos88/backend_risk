@@ -13,9 +13,13 @@ requests = "*"
 sqlalchemy-utils = "*"
 flasgger = "*"
 flask-caching = "*"
+flask-cors = "*"
 
 [dev-packages]
 pytest = "*"
+isort = "*"
+flake8 = "*"
+black = "*"
 
 [requires]
 python_version = "3.9"

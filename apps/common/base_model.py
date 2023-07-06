@@ -1,12 +1,12 @@
-from apps.extensions import db
-from sqlalchemy import Column, Integer, DateTime
-from sqlalchemy.sql import func
-
-from pytz import timezone
 from datetime import datetime
 
+from pytz import timezone
+from sqlalchemy import Column, DateTime, Integer
 
-UTC = timezone('America/Bogota')
+from apps.extensions import db
+
+UTC = timezone("America/Bogota")
+
 
 class BaseModel(db.Model):
     __abstract__ = True
